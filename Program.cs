@@ -10,8 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // ✅ Подключение к Azure Blob Storage
-string? connectionString = builder.Configuration.GetConnectionString("AzureBlobConnection");
+string? connectionString = Environment.GetEnvironmentVariable("AzureBlobConnection");
 builder.Services.AddSingleton(x => new BlobServiceClient(connectionString));
+
 
 // ✅ Регистрация репозитория
 builder.Services.AddScoped<IBlobRepository, BlobRepository>();
