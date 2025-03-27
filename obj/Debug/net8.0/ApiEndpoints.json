@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "BlobStorageAPI.Controllers.BlobStorageController",
+    "Method": "DeleteBlobFile",
+    "RelativePath": "api/BlobStorage/DeleteBlobFile",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "containerName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlobStorageAPI.Controllers.BlobStorageController",
+    "Method": "DownloadBlobFile",
+    "RelativePath": "api/BlobStorage/DownloadBlobFile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "containerName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlobStorageAPI.Controllers.BlobStorageController",
+    "Method": "GetBlobFiles",
+    "RelativePath": "api/BlobStorage/GetBlobFiles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "containerName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlobStorageAPI.Controllers.BlobStorageController",
+    "Method": "UploadBlobFile",
+    "RelativePath": "api/BlobStorage/UploadBlobFile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "BlobStorageAPI.Models.BlobContentModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
