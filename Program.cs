@@ -19,15 +19,16 @@ builder.Services.AddScoped<IBlobRepository, BlobRepository>();
 var app = builder.Build();
 
 // ✅ Включаем Swagger не только в Development, но и в Production (например, на Azure)
-if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blob Storage API v1");
-        c.RoutePrefix = string.Empty; // 👉 Swagger доступен прямо на корне сайта
+        c.RoutePrefix = "swagger"; // Теперь Swagger будет доступен по /swagger
     });
 }
+
 
 // Включаем HTTPS редирект и контроллеры
 app.UseHttpsRedirection();
