@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read # This is required for actions/checkout
+      contents: read #This is required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -24,10 +24,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build ./BlobStorageAPI/BlobStorageAPI.csproj --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish ./BlobStorageAPI/BlobStorageAPI.csproj -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -42,8 +42,8 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write # This is required for requesting the JWT
-      contents: read   # This is required for actions/checkout
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
 
     steps:
       - name: Download artifact from build job
@@ -54,9 +54,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DC5B9612DC774E43A990E3E4C3B5492D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9541DEBB935F46C4A2F086451799C326 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_30A1076504D946078C161486564E6D21 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E14909FEA68D49C88C1DC2F91D9FE552 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1CD254065B694AD19A0A23E272ABE136 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6AB1D681F1F3416DA2147B11F9708713 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -64,4 +64,5 @@ jobs:
         with:
           app-name: 'serverblobapi2025'
           slot-name: 'Production'
-          package: ${{env.DOTNET_ROOT}}/myapp
+          package: .
+          
