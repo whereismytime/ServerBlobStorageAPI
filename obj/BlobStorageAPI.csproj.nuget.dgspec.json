@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\avdym\\source\\repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj": {}
+    "C:\\Users\\avdym\\Source\\Repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\avdym\\source\\repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj": {
+    "C:\\Users\\avdym\\Source\\Repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\avdym\\source\\repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj",
+        "projectUniqueName": "C:\\Users\\avdym\\Source\\Repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj",
         "projectName": "BlobStorageAPI",
-        "projectPath": "C:\\Users\\avdym\\source\\repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj",
+        "projectPath": "C:\\Users\\avdym\\Source\\Repos\\ServerBlobStorageAPI\\BlobStorageAPI\\BlobStorageAPI.csproj",
         "packagesPath": "C:\\Users\\avdym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\avdym\\source\\repos\\ServerBlobStorageAPI\\BlobStorageAPI\\obj\\",
+        "outputPath": "C:\\Users\\avdym\\Source\\Repos\\ServerBlobStorageAPI\\BlobStorageAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
